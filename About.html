@@ -3,44 +3,38 @@
   <head>
     <link href="main.css" rel="stylesheet" type="text/css">
     <link href="LoginRegister.css" rel="stylesheet" type="text/css">
-    <link href="Shop.css" rel="stylesheet" type="text/css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 <a href="Frontpage.html">
-    <div class="banner">
-        <img src="" alt="Banner for the store">
-            
-            <p align="center">HELLO BANNER IMAGE GOES HERE</p>
-    </div>
+<div class="banner">
+<img src="" alt="Banner for the store">
+
+<p align="center">HELLO BANNER IMAGE GOES HERE</p>
+</div>
 </a>
 
 <div class="menu">
   <a href="Frontpage.html">
-<button class="dropbtn">Frontpage</button>
-</a>
- <button class="dropbtn">Shop</button>
+<button class="dropbtn" >Frontpage</button>
+  </a>
+  <a href="Shop.html">
+  <button class="dropbtn">Shop</button>
+  </a>
 <button class="dropbtn" onclick="document.getElementById('overlay2').style.display='block'" 
         style="float:right;">Sign Up</button>
 
 
 <button class="dropbtn" id="loginbtn" onclick="document.getElementById('overlay').style.display='block'"
         style="float:right">Login</button>
-<a href="About.html">
-<button class="dropbtn" style="float:right" >About Us</button></a>
+<button class="dropbtn" style="float:right">About Us</button>
 </div>
-  </head>
+</head>
 
-
-  
-  <body>
 <div id="overlay" class="modal">
 
   <form class="modal-content animate">
     <div class="closebutton">
-      <span onclick="document.getElementById('overlay').style.display='none'"
-            class="close" title="Close Modal">&times;</span>
+      <span onclick="document.getElementById('overlay').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
 
     <div class="container">
@@ -88,74 +82,31 @@
       <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
       <div class="clearfix">
-        <button type="button" onclick="document.getElementById('overlay2').style.display='none'"
-                class="dropbtn" style="background:red">Cancel</button>
+        <button type="button" onclick="document.getElementById('overlay2').style.display='none'" class="dropbtn" style="background:red">Cancel</button>
         <button type="submit" class="dropbtn">Sign Up</button>
       </div>
     </div>
   </form>
 </div>
-  
- <div class="row">
-      <div class="ShopItems">
-        <div class="Textarea"> <h1>Shop Items</h1>
-          <dd><a href="Frontpage.html">Item 1 </a></dd>
-          <dd><a href="Frontpage.html">Item 2 </a></dd>
-          <dd><a href="Frontpage.html">Item 3 </a></dd>
-          <dd><a href="Frontpage.html">Item 4 </a></dd>
-        </div>
-      </div>
-      <div class="Shop" style="padding-bottom:500px">
-        <div class="Textarea"> <h1>Browse</h1></div>
-        
-        <div class="grid" id="item1">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>  
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
 
-        <div>
-            <div class="productTitle">Pisoir</div>
-            <img src="" alt="Image" class="productImg">
-            <div class="productInfo">Price:<small class="priceItem">50</small>Kr
-              <button class="cartbtn">Add</button>
-          </div>
-            
-          </div>
 
-          
-          <div>
-            <div class="productTitle">Toilet</div>
-            <img src="" alt="Image" class="productImg">
-            <div class="productInfo">Price:
-              <small class="priceItem">100</small>Kr
-              <button class="cartbtn">Add</button>
-          </div>
-            
-          </div>
-          
-        </div>
+
+  <body>
+    <div class="row">
+      <div class="LeftText" style="padding-bottom:500px">
+        <div class="Textarea"> hej med mig</div>
+        <div class="Textarea"> hej med dig</div>
       </div>
       <div class="RightText">
-          <div class="Textarea"> <h1>Cart</h1> <p id="date" style="font-size=10px"></p></div>
-          <ul id="cartList">
-            <li>1</li>
-             <li>2</li>
-            
-            </ul>
-        <div class="Textarea">Total:<span class="price"> Price</span></div>
+        <div class="Textarea"> hej med mig</div>
+        <div class="Textarea"> hej med dig</div>
       </div>
     </div>
 
     
     <div class="Foot">
-     <h2> TÆÆÆÆÆKSTS </h2>
+     <h2> Pøls</h2>
     </div>
-
-
 
 
 <script>
@@ -175,17 +126,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
-var d = new Date();
-document.getElementById("date").innerHTML = d.toDateString();
-
-
-$(document).ready(function(){
-    $(this).click(function(){
-       $("#cartList").append("<li>").append($(".productTitle").text()).append($(".priceItem").text());
-    });
-});
-
 </script>
 
     
