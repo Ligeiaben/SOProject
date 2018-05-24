@@ -23,12 +23,14 @@ span.price {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-gap: 0.4%;
-  background-color: var(--main-border-color);
-  padding: 1%;
-  border-radius: 1%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    
+    grid-column-gap: 0.4%;
+    grid-row-gap: 10px;
+    background-color: var(--main-border-color);
+    padding: 1%;
+    border-radius: 1%;
 }
 .grid > div {
   background-color: #bae2ff;
@@ -88,7 +90,9 @@ span.price {
     margin: 0.1%;
     padding: 0.1%;
 }
-
+.cartbtn{
+    opacity :1;
+}
 .poductInfo{
     float: bottom;
 }
