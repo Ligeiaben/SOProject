@@ -8,11 +8,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script>
-        $(function () {
-
-            $("children").hide();
-
-        })
+      $(document).ready(function(){
+      $("#Costume").click(function(){
+      $("#cartList").append("<li>").append($(".productTitle").text()).append($(".priceItem").text());
+        });
+        });
     </script>
 
     <a href="Frontpage.html">
@@ -123,8 +123,8 @@
         <div class="grid" id="item1">
 
 
-          <div>
-            <div class="productTitle">Scissor costume</div>
+          <div id="Costume">
+            <div  class="productTitle">Scissor costume</div>
             <img class="itemImg" src="Pictures/costume.jpg" alt="Image">
             <div class="productInfo">Price: <small class="priceItem">50</small> Kr
             
@@ -142,7 +142,7 @@
             
           </div>
           <div>
-          <div class="productTitle">Scissor</div>
+          <div id="Scissor" class="productTitle">Scissor</div>
           <img class="itemImg" src="Pictures/scissor.jpg" alt="image" class="productImg">
           <div class="productInfo">Price: 
           <small class="priceItem">200</small> Kr
@@ -151,7 +151,7 @@
           </div>
           
           <div>
-          <div class="productTitle">Hat</div>
+          <div  id="hatKid" class="productTitle">Hat</div>
           <img class="itemImg" src="Pictures/hat.jpg" alt="image" class="productImg">
           <div class="productInfo">Price: 
           <small class="priceItem">1200</small> Kr
@@ -265,11 +265,7 @@ var d = new Date();
 document.getElementById("date").innerHTML = d.toDateString();
 
 
-$(document).ready(function(){
-    $("").click(function(){
-       $("#cartList").append("<li>").append($(".productTitle").text()).append($(".priceItem").text());
-    });
-});
+
 
 </script>
 

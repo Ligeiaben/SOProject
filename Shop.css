@@ -25,7 +25,6 @@ span.price {
 .grid {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    
     grid-column-gap: 0.4%;
     grid-row-gap: 10px;
     background-color: var(--main-border-color);
@@ -38,6 +37,11 @@ span.price {
   text-align: center;
   font-size: 30px;
   border-radius: 1%;
+}
+
+.grid > div:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .productTitle {
