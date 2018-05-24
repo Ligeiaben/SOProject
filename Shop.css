@@ -61,3 +61,27 @@ span.price {
     color: grey;
     font-size: 5px;
 }
+
+.Shop {
+    top: 120px;
+    float: left;
+    width: 71%;
+    padding-bottom: 100vh;
+    padding-left: 10px;
+    z-index: -1;
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    margin: 2px;
+}
+
+.ShopItems {
+    top: 120px;
+    float: left;
+    width: 15%;
+    padding-left: 10px;
+    z-index: -1;
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    margin: 2px;
+    padding: 3px;
+}
