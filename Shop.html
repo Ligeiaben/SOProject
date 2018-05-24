@@ -8,11 +8,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script>
+      var pris1 = "200"
+      var pris2 = "20"
+      var pris3 = "800"
+      var pris4 = "650000"
+
+      
       $(document).ready(function(){
       $("#Costume").click(function(){
-      $("#cartList").append("<li>").append($(".productTitle").text()).append($(".priceItem").text());
+      $("#cartList").append("<li>","Scissor Costume:" , pris1," Kr" , "</li>");
         });
+      });
+
+            $(document).ready(function(){
+      $("#Dig").click(function(){
+      $("#cartList").append("<li>","Digger:" , pris4," Kr" , "</li>");
         });
+      });
+
+            $(document).ready(function(){
+      $("#Scissor").click(function(){
+      $("#cartList").append("<li>","Child Scissor: ", pris2," Kr" , "</li>");
+        });
+      });
+
+                  $(document).ready(function(){
+      $("#hatKid").click(function(){
+      $("#cartList").append("<li>","Child Hat: ", pris3," Kr" , "</li>");
+        });
+      });
+
+                        $(document).ready(function(){
+      $("#hatAdult").click(function(){
+      $("#cartList").append("<li>", "Adult Hat: ",   pris3," Kr" , "</li>");
+        });
+      });
+
+                              $(document).ready(function(){
+      $("#Vase").click(function(){
+      $("#cartList").append("<li>","Vase: ", pris1," Kr" , "</li>");
+        });
+      });
+
+      
     </script>
 
     <a href="Frontpage.html">
@@ -133,16 +171,16 @@
         </div>
 
           
-          <div>
-            <div  id="Dig" class="productTitle">Dig Cow</div>
+          <div id="Dig">
+            <div   class="productTitle">Dig Cow</div>
             <img   class="itemImg" src="Pictures/gravko.jpeg" alt="image" class="productImg">
             <div   class="productInfo">Price: 
               <small class="priceItem">650.000</small> Kr
           </div>
             
           </div>
-          <div>
-          <div id="Scissor" class="productTitle">Scissor</div>
+          <div id="Scissor">
+          <div  class="productTitle">Scissor</div>
           <img class="itemImg" src="Pictures/scissor.jpg" alt="image" class="productImg">
           <div class="productInfo">Price: 
           <small class="priceItem">200</small> Kr
@@ -150,8 +188,8 @@
           
           </div>
           
-          <div>
-          <div  id="hatKid" class="productTitle">Hat</div>
+          <div id="hatKid">
+          <div   class="productTitle">Hat</div>
           <img class="itemImg" src="Pictures/hat.jpg" alt="image" class="productImg">
           <div class="productInfo">Price: 
           <small class="priceItem">1200</small> Kr
@@ -169,7 +207,7 @@
      
 
       
-      <div>
+      <div  id="Vase">
       <div class="productTitle">Vase</div>
       <img class="itemImg" src="Pictures/vase.jpg" alt="Image" class="productImg">
       <div class="productInfo">Price: <small class="priceItem">10</small> Kr
@@ -179,7 +217,7 @@
       </div>
       
       
-      <div>
+      <div id="hatAdult">
       <div class="productTitle">Hat</div>
       <img class="itemImg" src="Pictures/hat.jpg" alt="Image" class="productImg">
       <div class="productInfo">Price: 
@@ -195,11 +233,9 @@
       <div class="RightText">
           <div class="Textarea"> <h1>Cart</h1> <p id="date" style="font-size=10px"></p></div>
           <ul id="cartList">
-            <li>1</li>
-             <li>2</li>
-            
-            </ul>
-        <div class="Textarea">Total:<span class="price"> Price</span></div>
+          </ul>
+          <div class="Textarea">Total:<span class="price"> Price</span></div>
+          <button style="float:right">Check Out</button>
       </div>
     </div>
     
@@ -214,8 +250,6 @@
 
       
 <script>
-
-
 var modal = document.getElementById('overlay');
 window.onclick = function(event) {
     if (event.target == modal) {
