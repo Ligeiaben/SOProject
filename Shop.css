@@ -8,7 +8,7 @@
 }
 
 dd {
-    padding: 10px;
+    padding: 1%;
     float: top;
 }
 
@@ -25,38 +25,37 @@ span.price {
 .grid {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-gap: 10px;
+  grid-gap: 0.4%;
   background-color: var(--main-border-color);
-  padding: 10px;
-  border-radius: 10px;
+  padding: 1%;
+  border-radius: 1%;
 }
 .grid > div {
   background-color: #bae2ff;
-  border: 1px solid black;
+  border: 2% solid black;
   text-align: center;
   font-size: 30px;
-  border-radius: 4px;
+  border-radius: 1%;
 }
 
 .productTitle {
-        border: 1px solid;
-    border-radius: 4px;
+        border: 1% solid;
+    border-radius: 1%;
     float: top;
+    background-color: var(--main-bg-color)
 }
 
 .productImg {
     width: 50%
     height: 50%
-    border-radius: 4px;
+    border-radius: 1%;
 }
 
 .itemImg{
-    border: 1px solid;
-    border-radius: 4px;
-    float: bottom;
-    text-align: left;
-    width:33%;
-    height:33%;
+    border: 1% solid;
+    border-radius: 1%;
+    width:25%;
+    height:25%;
 }
 
 
@@ -65,28 +64,31 @@ span.price {
     font-size: 15px;
 }
 
-
-
 .Shop {
-    top: 120px;
+    top: 30%;
     float: left;
-    width: 71%;
+    width: 73%;
     padding-bottom: 100vh;
-    padding-left: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
     z-index: -1;
     background-color: var(--main-bg-color);
-    border-radius: 10px;
-    margin: 2px;
+    border-radius: 1%;
+    margin: 0.1%;
 }
 
 .ShopItems {
-    top: 120px;
+    top: 30%;
     float: left;
-    width: 15%;
-    padding-left: 10px;
+    width: 10%;
+    padding-left: 1%;
     z-index: -1;
     background-color: var(--main-bg-color);
-    border-radius: 10px;
-    margin: 2px;
-    padding: 3px;
+    border-radius: 1%;
+    margin: 0.1%;
+    padding: 0.1%;
+}
+
+.poductInfo{
+    float: bottom;
 }
