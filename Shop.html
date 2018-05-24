@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <link href="main.css" rel="stylesheet" type="text/css">
     <link href="LoginRegister.css" rel="stylesheet" type="text/css">
     <link href="Shop.css" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <script>
+        $(function () {
 
-<a href="Frontpage.html">
-    <div class="banner">
-        <img src="bob.png" style="width:100%" alt="Banner for the store">
-            
+            $("children").hide();
+
+        })
+    </script>
+
+    <a href="Frontpage.html">
+        <div class="banner">
+            <img src="bob.png" style="width:100%" alt="Banner for the store">
+
+
+        </div>
+    </a>
+
+    <div class="menu">
+        <a href="Frontpage.html">
+            <button class="dropbtn">Frontpage</button>
+        </a>
+        <button class="dropbtn">Shop</button>
+        <button class="dropbtn" onclick="document.getElementById('overlay2').style.display='block'"
+                style="float:right;">
+            Sign Up
+        </button>
+
+
+        <button class="dropbtn" id="loginbtn" onclick="document.getElementById('overlay').style.display='block'"
+                style="float:right">
+            Login
+        </button>
+        <a href="About.html">
+            <button class="dropbtn" style="float:right">About Us</button>
+        </a>
     </div>
-</a>
-
-<div class="menu">
-  <a href="Frontpage.html">
-<button class="dropbtn">Frontpage</button>
-</a>
- <button class="dropbtn">Shop</button>
-<button class="dropbtn" onclick="document.getElementById('overlay2').style.display='block'" 
-        style="float:right;">Sign Up</button>
-
-
-<button class="dropbtn" id="loginbtn" onclick="document.getElementById('overlay').style.display='block'"
-        style="float:right">Login</button>
-<a href="About.html">
-<button class="dropbtn" style="float:right" >About Us</button></a>
-</div>
-  </head>
+</head>
 
 
   
@@ -121,9 +134,9 @@
 
           
           <div>
-            <div class="productTitle">Dig Cow</div>
-            <img class="itemImg" src="Pictures/gravko.jpeg" alt="image" class="productImg">
-            <div class="productInfo">Price: 
+            <div  id="Dig" class="productTitle">Dig Cow</div>
+            <img   class="itemImg" src="Pictures/gravko.jpeg" alt="image" class="productImg">
+            <div   class="productInfo">Price: 
               <small class="priceItem">650.000</small> Kr
           </div>
             
@@ -197,8 +210,11 @@
 
 
 
+      
 
+      
 <script>
+
 
 var modal = document.getElementById('overlay');
 window.onclick = function(event) {
