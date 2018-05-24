@@ -1,7 +1,21 @@
+:root {
+    --main-bg-color: #8ed0ff;
+    --main-txt-color: #00394d;
+    --main-padding: 10px;
+    --main-btn: #0096cc;
+    --main-hover: #2a4166;
+    --main-border-color: #00394d;
+}
+
 dd {
     padding: 10px;
     float: top;
 }
+
+dd:hover {
+    cursor: pointer;
+    color:  white;
+    }
 
 span.price {
   float: right;
@@ -12,12 +26,12 @@ span.price {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-gap: 10px;
-  background-color: #4CAF50;
+  background-color: var(--main-border-color);
   padding: 10px;
   border-radius: 10px;
 }
 .grid > div {
-  background-color: #ccffcc;
+  background-color: #bae2ff;
   border: 1px solid black;
   text-align: center;
   font-size: 30px;
@@ -44,7 +58,7 @@ span.price {
 }
 
 .cartbtn {
-       background-color: #4CAF50;
+       background-color: var(--main-hover);
     color: white;
     padding: 8px;
     font-size: 16px;
@@ -53,13 +67,13 @@ span.price {
     float: right;
 }
 .cartbtn:hover {
-        background-color: #9CAF50;
+        background-color: var(--main-bg-color);
     color: black;
 }
 
 .price {
     color: grey;
-    font-size: 5px;
+    font-size: 15px;
 }
 
 .Shop {

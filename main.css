@@ -1,21 +1,21 @@
 :root {
-    --main-bg-color: #00bfff;
+    --main-bg-color: #8ed0ff;
     --main-txt-color: #00394d;
     --main-padding: 10px;
     --main-btn: #0096cc;
+    --main-hover: #2a4166;
     --main-border-color: #00394d;
 }
 
 
 body  {
     
-    background-image: url("SomeImageFirst"), url("SomeImage");
-    background: linear-gradient( white ,#00bfff,  #00394d);
+    background-image: url("bgimage.jpg"), url("SomeImage");
     padding-bottom: 10vh;
 }
 
 .dropbtn {
-    background-color: var(--main-bg-color);
+    background-color: var(--main-hover);
     color: white;
     padding: 8px;
     font-size: 16px;
@@ -23,7 +23,7 @@ body  {
     border-radius: 4px;
 }
 .dropbtn:hover {
-    background-color: #9CAF50;
+    background-color: var(--main-bg-color);
     color: black;
 }
 
@@ -32,7 +32,7 @@ body  {
   position: sticky;
   top: 1%;
   padding: 3px;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-hover);
   border: 2px solid var(--main-border-color);
   border-radius: 10px;
       margin: 2px;

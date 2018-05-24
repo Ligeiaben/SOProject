@@ -99,32 +99,25 @@
  <div class="row">
       <div class="ShopItems">
         <div class="Textarea"> <h1>Shop Items</h1>
-          <dd><a href="Frontpage.html">Item 1 </a></dd>
-          <dd><a href="Frontpage.html">Item 2 </a></dd>
-          <dd><a href="Frontpage.html">Item 3 </a></dd>
-          <dd><a href="Frontpage.html">Item 4 </a></dd>
+          <dd onclick="childPick()">Items for children</dd>
+          <dd onclick="adultPick()">Items for adults</dd>
         </div>
       </div>
-      <div class="Shop" >
-        <div class="Textarea"> <h1>Browse</h1></div>
+      
+      <div class="Shop" id="children">
+        <div class="Textarea"> <h1>Browse items for children</h1></div>
         
         <div class="grid" id="item1">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>  
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
 
-        <div>
+
+          <div>
             <div class="productTitle">Pisoir</div>
             <img src="" alt="Image" class="productImg">
             <div class="productInfo">Price:<small class="priceItem">50</small>Kr
               <button class="cartbtn">Add</button>
           </div>
             
-          </div>
+        </div>
 
           
           <div>
@@ -136,9 +129,46 @@
           </div>
             
           </div>
-          
+
         </div>
+        
       </div>
+      
+      <div class="Shop" id="adults" style="display:none">
+      <div class="Textarea"> <h1>Browse items for adults</h1></div>
+      
+      <div class="grid" id="item1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      
+      <div>
+      <div class="productTitle">Pisoir</div>
+      <img src="" alt="Image" class="productImg">
+      <div class="productInfo">Price:<small class="priceItem">50</small>Kr
+      <button class="cartbtn">Add</button>
+      </div>
+      
+      </div>
+      
+      
+      <div>
+      <div class="productTitle">Toilet</div>
+      <img src="" alt="Image" class="productImg">
+      <div class="productInfo">Price:
+      <small class="priceItem">100</small>Kr
+      <button class="cartbtn">Add</button>
+      </div>
+      
+      </div>
+      
+      </div>
+      </div>
+
       <div class="RightText">
           <div class="Textarea"> <h1>Cart</h1> <p id="date" style="font-size=10px"></p></div>
           <ul id="cartList">
@@ -149,8 +179,20 @@
         <div class="Textarea">Total:<span class="price"> Price</span></div>
       </div>
     </div>
-
     
+       <div class="RightText">
+    <div class="Textarea"> <h1>Cart</h1> <p id="date" style="font-size=10px"></p></div>
+    <ul id="cartList">
+    <li>1</li>
+    <li>2</li>
+    
+    </ul>
+    <div class="Textarea">Total:<span class="price"> Price</span></div>
+    </div>
+    </div>
+
+
+
     <div class="Foot">
      <h2> Useless stuff since 1944</h2>
     </div>
@@ -175,6 +217,24 @@ window.onclick = function(event) {
     }
 }
 
+function childPick() {
+var child = document.getElementById("children");
+var adult = document.getElementById("adults");
+
+
+    adult.style.display = "none";
+    child.style.display = "block";
+    
+}
+
+function adultPick() {
+var adult = document.getElementById("adults");
+var child = document.getElementById("children");
+
+
+    child.style.display = "none";
+    adult.style.display = "block";
+}
 
 
 var d = new Date();
