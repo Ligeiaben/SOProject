@@ -112,9 +112,9 @@
 
           <div>
             <div class="productTitle">Pisoir</div>
-            <img src="" alt="Image" class="productImg">
+            <img  class="itemImg" src="Pictures/costume.jpg" alt="Image">
             <div class="productInfo">Price:<small class="priceItem">50</small>Kr
-              <button class="cartbtn">Add</button>
+            
           </div>
             
         </div>
@@ -125,7 +125,6 @@
             <img src="" alt="Image" class="productImg">
             <div class="productInfo">Price:
               <small class="priceItem">100</small>Kr
-              <button class="cartbtn">Add</button>
           </div>
             
           </div>
@@ -236,13 +235,23 @@ var child = document.getElementById("children");
     adult.style.display = "block";
 }
 
+function clickItem() {
+var x= document.getElementById("this");
+var adult = document.getElementById("adults");
+
+
+adult.style.display = "none";
+child.style.display = "block";
+
+}
+
 
 var d = new Date();
 document.getElementById("date").innerHTML = d.toDateString();
 
 
 $(document).ready(function(){
-    $(".cartbtn").click(function(){
+    $("").click(function(){
        $("#cartList").append("<li>").append($(".productTitle").text()).append($(".priceItem").text());
     });
 });

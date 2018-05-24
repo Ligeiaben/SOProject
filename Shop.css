@@ -50,31 +50,22 @@ span.price {
     border-radius: 4px;
 }
 
-.productInfo {
+.itemImg{
     border: 1px solid;
     border-radius: 4px;
     float: bottom;
     text-align: left;
+    width:33%;
+    height:33%;
 }
 
-.cartbtn {
-       background-color: var(--main-hover);
-    color: white;
-    padding: 8px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    float: right;
-}
-.cartbtn:hover {
-        background-color: var(--main-bg-color);
-    color: black;
-}
 
 .price {
     color: grey;
     font-size: 15px;
 }
+
+
 
 .Shop {
     top: 120px;
