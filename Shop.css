@@ -12,9 +12,14 @@ dd {
     float: top;
 }
 
-dd:hover {
+li:hover {
     cursor: pointer;
     color:  white;
+}
+
+dd:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0, 0.8);
     }
 
 span.price {

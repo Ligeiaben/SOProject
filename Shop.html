@@ -16,13 +16,13 @@
       
       $(document).ready(function(){
       $("#Costume").click(function(){
-      $("#cartList").append("<li>","Scissor Costume:" , pris1," Kr" , "</li>");
+      $("#cartList").append("<li>","Scissor Costume: " , pris1," Kr" , "</li>");
         });
       });
 
             $(document).ready(function(){
       $("#Dig").click(function(){
-      $("#cartList").append("<li>","Digger:" , pris4," Kr" , "</li>");
+      $("#cartList").append("<li>","Digger: " , pris4," Kr" , "</li>");
         });
       });
 
@@ -33,20 +33,27 @@
       });
 
                   $(document).ready(function(){
-      $("#hatKid").click(function(){
-      $("#cartList").append("<li>","Child Hat: ", pris3," Kr" , "</li>");
+      $("#hatChild").click(function(){
+      $("#cartList").append("<li>","Hat: ", pris3," Kr" , "</li>");
         });
       });
 
                         $(document).ready(function(){
       $("#hatAdult").click(function(){
-      $("#cartList").append("<li>", "Adult Hat: ",   pris3," Kr" , "</li>");
+      $("#cartList").append("<li>","Hat: ", pris3," Kr" , "</li>");
         });
       });
+
 
                               $(document).ready(function(){
       $("#Vase").click(function(){
       $("#cartList").append("<li>","Vase: ", pris1," Kr" , "</li>");
+        });
+      });
+
+                  $(document).ready(function(){
+      $('li').click(function(){
+      $(this).remove();
         });
       });
 
@@ -188,7 +195,7 @@
           
           </div>
           
-          <div id="hatKid">
+          <div id="hatChild">
           <div   class="productTitle">Hat</div>
           <img class="itemImg" src="Pictures/hat.jpg" alt="image" class="productImg">
           <div class="productInfo">Price: 
@@ -211,7 +218,6 @@
       <div class="productTitle">Vase</div>
       <img class="itemImg" src="Pictures/vase.jpg" alt="Image" class="productImg">
       <div class="productInfo">Price: <small class="priceItem">10</small> Kr
-      <button class="cartbtn">Add</button>
       </div>
       
       </div>
@@ -222,7 +228,6 @@
       <img class="itemImg" src="Pictures/hat.jpg" alt="Image" class="productImg">
       <div class="productInfo">Price: 
       <small class="priceItem">1200</small> Kr
-      <button class="cartbtn">Add</button>
       </div>
       
       </div>
