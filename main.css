@@ -1,10 +1,21 @@
+:root {
+    --main-bg-color: #00bfff;
+    --main-txt-color: #00394d;
+    --main-padding: 10px;
+    --main-btn: #0096cc;
+    --main-border-color: #00394d;
+}
+
+
 body  {
+    
     background-image: url("SomeImageFirst"), url("SomeImage");
-    background: linear-gradient(white, green, white);
+    background: linear-gradient( white ,#00bfff,  #00394d);
+    padding-bottom: 10vh;
 }
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: var(--main-bg-color);
     color: white;
     padding: 8px;
     font-size: 16px;
@@ -21,19 +32,21 @@ body  {
   position: sticky;
   top: 1%;
   padding: 3px;
-  background-color: #4CAF50;
-  border: 2px solid #4CAF50;
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-border-color);
   border-radius: 10px;
       margin: 2px;
 
 }
 .banner {
+    
     top: 150px;
-    border: 3px solid #73AD21;
     z-index: -1;
     border-radius: 10px;
-    margin: 2px;
-    padding: 3px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .LeftText {
@@ -42,45 +55,22 @@ body  {
     width: 86%;
     padding-left: 10px;
     z-index: -1;
-    background-color: #ccffcc;
+    background-color: var(--main-bg-color);
 
     border-radius: 10px;
         margin: 2px;
-        padding: 3px;
 }
 .RightText {
     top: 120px;
     float: left;
     width: 12%;
-    background-color: #ccffcc;
+    background-color: var(--main-bg-color);
     padding-left: 10px;
         border-radius: 10px;
         margin: 2px;
         padding: 3px;
 }
 
-.ShopItems {
-    top: 120px;
-    float: left;
-    width: 15%;
-    padding-left: 10px;
-    z-index: -1;
-    background-color: #ccffcc;
-    border-radius: 10px;
-    margin: 2px;
-    padding: 3px;
-}
-.Shop {
-    top: 120px;
-    float: left;
-    width: 71%;
-    padding-left: 10px;
-    z-index: -1;
-    background-color: #ccffcc;
-    border-radius: 10px;
-    margin: 2px;
-    padding: 3px;
-}
 
 .row:after {
     content: "";
@@ -89,17 +79,18 @@ body  {
 }
 
 .Textarea {
-    background-color: #ccffcc;
+    background-color: var(--main-bg-color);
     padding: 20px;
     margin-top: 10px;
 }
 
 .Foot {
-    padding: 20px;
+    
+    padding-bottom: 20px;
     text-align: center;
-    background-color: #ccffcc;
+    background-color: var(--main-bg-color);
     margin-top: 20px;
-    border: 3px solid #73AD21;
+    border: 3px solid #00394d;
             border-radius: 10px;
         margin: 2px;
         padding: 3px;
