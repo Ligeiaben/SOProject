@@ -24,7 +24,7 @@ dd:hover {
 
 span.price {
   float: right;
-  color: grey;
+  color: black;
 }
 
 .grid {
@@ -49,6 +49,14 @@ span.price {
     color: rgba(0, 0, 0, 0.6);
 }
 
+.TextCat {
+    background-color: var(--main-bg-color);
+    font-size: 18px;
+    margin-top: 1%;
+    
+}
+
+
 .productTitle {
         border: 1% solid;
     border-radius: 1%;
@@ -71,8 +79,8 @@ span.price {
 
 
 .price {
-    color: grey;
-    font-size: 15px;
+    color: green;
+    font-size: 20px;
 }
 
 .Shop {

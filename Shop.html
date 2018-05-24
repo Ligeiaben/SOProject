@@ -8,48 +8,78 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script>
-      var pris1 = "200"
-      var pris2 = "20"
-      var pris3 = "800"
-      var pris4 = "650000"
+      var prisCostume = "50"
+        var prisDig = "650000"
+      var prisScissor = "200"
+        var prisHat = "1200"
+        var prisVase = "10"
+        var total = 0;
+        var itemsCount = [0,0,0,0,0];
+
+        function UpdateItems() {
+            $("#cartList").empty();
+            if (itemsCount[0] > 0)
+                $("#cartList").append("<div>", itemsCount[0], " Scissor Costume(s): ", prisCostume * itemsCount[0], " Kr", "</div>");
+            if (itemsCount[1] > 0)
+                $("#cartList").append("<div>", itemsCount[1], " Dig Cow(s): ", prisDig * itemsCount[1], " Kr", "</div>");
+            if (itemsCount[2] > 0)
+                $("#cartList").append("<div>", itemsCount[2], " Scissor(s): ", prisScissor * itemsCount[2], " Kr", "</div>");
+            if (itemsCount[3] > 0)
+                $("#cartList").append("<div>", itemsCount[3], " Hat(s): ", prisHat * itemsCount[3], " Kr", "</div>");
+            if (itemsCount[4] > 0)
+                $("#cartList").append("<div>", itemsCount[4], " Vase(s): ", prisVase * itemsCount[4], " Kr", "</div>");
+
+            total = prisCostume * itemsCount[0] + prisDig * itemsCount[1] + prisScissor * itemsCount[2] + prisHat * itemsCount[3] + prisVase * itemsCount[4]
+
+            $("#pinsePrinsen").text(total);
+        }
 
       
       $(document).ready(function(){
-      $("#Costume").click(function(){
-      $("#cartList").append("<li>","Scissor Costume: " , pris1," Kr" , "</li>");
-        });
+          $("#Costume").click(function () {
+              itemsCount[0]++;
+              UpdateItems()
+          });
+          $("#Dig").click(function () {
+              itemsCount[1]++;
+              UpdateItems()
+          });
+          $("#Scissor").click(function () {
+              itemsCount[2]++;
+              UpdateItems()
+          });
+          $("#hatChild").click(function () {
+              itemsCount[3]++;
+              UpdateItems()
+          });
+          $("#hatAdult").click(function () {
+              itemsCount[3]++;
+              UpdateItems()
+          });
+          $("#Vase").click(function () {
+              itemsCount[4]++;
+              UpdateItems()
+          });
+          $("#empty").click(function () {
+              itemsCount[0] = 0;
+              itemsCount[1] = 0;
+              itemsCount[2] = 0;
+              itemsCount[3] = 0;
+              itemsCount[4] = 0;
+              
+              
+              UpdateItems()
+          });
+
+          
+
+
+
       });
 
-            $(document).ready(function(){
-      $("#Dig").click(function(){
-      $("#cartList").append("<li>","Digger: " , pris4," Kr" , "</li>");
-        });
-      });
+     
 
-            $(document).ready(function(){
-      $("#Scissor").click(function(){
-      $("#cartList").append("<li>","Child Scissor: ", pris2," Kr" , "</li>");
-        });
-      });
-
-                  $(document).ready(function(){
-      $("#hatChild").click(function(){
-      $("#cartList").append("<li>","Hat: ", pris3," Kr" , "</li>");
-        });
-      });
-
-                        $(document).ready(function(){
-      $("#hatAdult").click(function(){
-      $("#cartList").append("<li>","Hat: ", pris3," Kr" , "</li>");
-        });
-      });
-
-
-                              $(document).ready(function(){
-      $("#Vase").click(function(){
-      $("#cartList").append("<li>","Vase: ", pris1," Kr" , "</li>");
-        });
-      });
+      
 
                   $(document).ready(function(){
       $('li').click(function(){
@@ -91,223 +121,264 @@
 
 
   
-  <body>
-<div id="overlay" class="modal">
+<body>
+    <div id="overlay" class="modal">
 
-  <form class="modal-content animate">
-    <div class="closebutton">
-      <span onclick="document.getElementById('overlay').style.display='none'"
-            class="close" title="Close Modal">&times;</span>
+        <form class="modal-content animate">
+            <div class="closebutton">
+                <span onclick="document.getElementById('overlay').style.display='none'"
+                      class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <h1>Log In</h1>
+                <hr>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button class="dropbtn" id="loginbtn" type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+    <div id="overlay3" class="modal">
+
+        <form class="modal-content animate">
+            <div class="closebutton">
+                <span onclick="document.getElementById('overlay3').style.display='none'"
+                      class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <h1 >Payment Method</h1>
+                <div >
+                  Please fill in you credit card information to aquire your useless items
+                </div>
+                <hr>
+                <label for="uname"><b>Card Number</b></label>
+                <input type="text" placeholder="Enter Number" name="uname" required>
+
+                
+                <button  class="dropbtn" id="loginbtn" type="submit" style="float:right">Pay</button>
+                
+                
+            </div>
+        </form>
     </div>
 
-    <div class="container">
-      <h1>Log In</h1>
-      <hr>
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-         <button class="dropbtn" id="loginbtn" type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+    <div id="overlay2" class="modal">
+        <form class="modal-content animate">
+            <div class="closebutton">
+                <span onclick="document.getElementById('overlay2').style.display='none'"
+                      class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>
+                    By creating an account you agree to our
+                    <a href="#" style="color:dodgerblue"> Terms & Privacy </a> .
+                </p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('overlay2').style.display='none'"
+                            class="dropbtn" style="background:red">
+                        Cancel
+                    </button>
+                    <button type="submit" class="dropbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
     </div>
-  </form>
-</div>
 
-
-<div id="overlay2" class="modal">
-  <form class="modal-content animate">
-      <div class="closebutton">
-      <span onclick="document.getElementById('overlay2').style.display='none'" 
-      class="close" title="Close Modal">&times;</span>
-    </div>
-  
-    <div class="container">
-      <h1>Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-      
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
-
-      <p>By creating an account you agree to our
-      <a href="#" style="color:dodgerblue"> Terms & Privacy </a> .</p>
-
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('overlay2').style.display='none'"
-                class="dropbtn" style="background:red">Cancel</button>
-        <button type="submit" class="dropbtn">Sign Up</button>
-      </div>
-    </div>
-  </form>
-</div>
-  
- <div class="row">
-      <div class="ShopItems">
-        <div class="Textarea"> <h1>Shop Items</h1>
-          <dd onclick="childPick()">Items for children</dd>
-          <dd onclick="adultPick()">Items for adults</dd>
+    <div class="row">
+        <div class="ShopItems">
+            <div class="TextCat">
+                <h1>Shop Items</h1>
+                <dd onclick="childPick()">Items for children</dd>
+                <dd onclick="adultPick()">Items for adults</dd>
+            </div>
         </div>
-      </div>
-      
-      <div class="Shop" id="children">
-        <div class="Textarea"> <h1>Browse items for children</h1></div>
-        
-        <div class="grid" id="item1">
+
+        <div class="Shop" id="children">
+            <div class="Textarea"> <h1>Browseing items for children</h1></div>
+
+            <div class="grid" id="item1">
 
 
-          <div id="Costume">
-            <div  class="productTitle">Scissor costume</div>
-            <img class="itemImg" src="Pictures/costume.jpg" alt="Image">
-            <div class="productInfo">Price: <small class="priceItem">50</small> Kr
-            
-          </div>
-            
+                <div id="Costume">
+                    <div class="productTitle">Scissor costume</div>
+                    <img class="itemImg" src="Pictures/costume.jpg" alt="Image">
+                    <div class="productInfo">
+                        Price: <small class="priceItem">50</small> Kr
+
+                    </div>
+
+                </div>
+
+
+                <div id="Dig">
+                    <div class="productTitle">Dig Cow</div>
+                    <img class="itemImg" src="Pictures/gravko.jpeg" alt="image" class="productImg">
+                    <div class="productInfo">
+                        Price:
+                        <small class="priceItem">650.000</small> Kr
+                    </div>
+
+                </div>
+                <div id="Scissor">
+                    <div class="productTitle">Scissor</div>
+                    <img class="itemImg" src="Pictures/scissor.jpg" alt="image" class="productImg">
+                    <div class="productInfo">
+                        Price:
+                        <small class="priceItem">200</small> Kr
+                    </div>
+
+                </div>
+
+                <div id="hatChild">
+                    <div class="productTitle">Hat</div>
+                    <img class="itemImg" src="Pictures/hat.jpg" alt="image" class="productImg">
+                    <div class="productInfo">
+                        Price:
+                        <small class="priceItem">1200</small> Kr
+                    </div>
+
+                </div>
+            </div>
+
         </div>
 
-          
-          <div id="Dig">
-            <div   class="productTitle">Dig Cow</div>
-            <img   class="itemImg" src="Pictures/gravko.jpeg" alt="image" class="productImg">
-            <div   class="productInfo">Price: 
-              <small class="priceItem">650.000</small> Kr
-          </div>
-            
-          </div>
-          <div id="Scissor">
-          <div  class="productTitle">Scissor</div>
-          <img class="itemImg" src="Pictures/scissor.jpg" alt="image" class="productImg">
-          <div class="productInfo">Price: 
-          <small class="priceItem">200</small> Kr
-          </div>
-          
-          </div>
-          
-          <div id="hatChild">
-          <div   class="productTitle">Hat</div>
-          <img class="itemImg" src="Pictures/hat.jpg" alt="image" class="productImg">
-          <div class="productInfo">Price: 
-          <small class="priceItem">1200</small> Kr
-          </div>
-          
-          </div>
+        <div class="Shop" id="adults" style="display:none">
+            <div class="Textarea"> <h1>Browseing items for adults</h1></div>
+
+            <div class="grid" id="item1">
+
+
+
+                <div id="Vase">
+                    <div class="productTitle">Vase</div>
+                    <img class="itemImg" src="Pictures/vase.jpg" alt="Image" class="productImg">
+                    <div class="productInfo">
+                        Price: <small class="priceItem">10</small> Kr
+                    </div>
+
+                </div>
+
+
+                <div id="hatAdult">
+                    <div class="productTitle">Hat</div>
+                    <img class="itemImg" src="Pictures/hat.jpg" alt="Image" class="productImg">
+                    <div class="productInfo">
+                        Price:
+                        <small class="priceItem">1200</small> Kr
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-        
-      </div>
-      
-      <div class="Shop" id="adults" style="display:none">
-      <div class="Textarea"> <h1>Browse items for adults</h1></div>
-      
-      <div class="grid" id="item1">
-     
 
-      
-      <div  id="Vase">
-      <div class="productTitle">Vase</div>
-      <img class="itemImg" src="Pictures/vase.jpg" alt="Image" class="productImg">
-      <div class="productInfo">Price: <small class="priceItem">10</small> Kr
-      </div>
-      
-      </div>
-      
-      
-      <div id="hatAdult">
-      <div class="productTitle">Hat</div>
-      <img class="itemImg" src="Pictures/hat.jpg" alt="Image" class="productImg">
-      <div class="productInfo">Price: 
-      <small class="priceItem">1200</small> Kr
-      </div>
-      
-      </div>
-      
-      </div>
-      </div>
-
-      <div class="RightText">
-          <div class="Textarea"> <h1>Cart</h1> <p id="date" style="font-size=10px"></p></div>
-          <ul id="cartList">
-          </ul>
-          <div class="Textarea">Total:<span class="price"> Price</span></div>
-          <button style="float:right">Check Out</button>
-      </div>
+        <div class="RightText">
+            <div class="Textarea"> <h1>Cart</h1> <p id="date" style="font-size=10px"></p></div>
+            <ul id="cartList"></ul>
+            <div class="Textarea">Total:<span class="price" id="pinsePrinsen"> 0</span></div>
+            <button id="empty" style="float:left">Empty Cart</button>
+            <button style="float:right" onclick="document.getElementById('overlay3').style.display='block'">Check Out</button>
+        </div>
     </div>
-    
+
 
     <div class="Foot">
-     <h2> Useless stuff since 1944</h2>
+        <h2> Useless stuff since 1944</h2>
     </div>
 
 
 
-      
-
-      
-<script>
-var modal = document.getElementById('overlay');
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        
-    }
-}
-
-var modal2 = document.getElementById('overlay2');
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-function childPick() {
-var child = document.getElementById("children");
-var adult = document.getElementById("adults");
-
-
-    adult.style.display = "none";
-    child.style.display = "block";
-    
-}
-
-function adultPick() {
-var adult = document.getElementById("adults");
-var child = document.getElementById("children");
-
-
-    child.style.display = "none";
-    adult.style.display = "block";
-}
-
-function clickItem() {
-var x= document.getElementById("this");
-var adult = document.getElementById("adults");
-
-
-adult.style.display = "none";
-child.style.display = "block";
-
-}
-
-
-var d = new Date();
-document.getElementById("date").innerHTML = d.toDateString();
 
 
 
+    <script>
+        var modal = document.getElementById('overlay');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
 
-</script>
+            }
+        }
 
-    
-  </body>
+        var modal2 = document.getElementById('overlay2');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        var modal3 = document.getElementById('overlay3');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function childPick() {
+            var child = document.getElementById("children");
+            var adult = document.getElementById("adults");
+
+
+            adult.style.display = "none";
+            child.style.display = "block";
+
+        }
+
+        function adultPick() {
+            var adult = document.getElementById("adults");
+            var child = document.getElementById("children");
+
+
+            child.style.display = "none";
+            adult.style.display = "block";
+        }
+
+        function clickItem() {
+            var x = document.getElementById("this");
+            var adult = document.getElementById("adults");
+
+
+            adult.style.display = "none";
+            child.style.display = "block";
+
+        }
+
+
+        var d = new Date();
+        document.getElementById("date").innerHTML = d.toDateString();
+
+
+
+
+    </script>
+
+
+</body>
 </html>
