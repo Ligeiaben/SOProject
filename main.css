@@ -50,10 +50,10 @@ body  {
 }
 
 .LeftText {
-    top: 120px;
+    top: 20%;
     float: left;
     width: 86%;
-    padding-left: 10px;
+    padding-left: 1%;
     z-index: -1;
     background-color: var(--main-bg-color);
 
@@ -61,14 +61,14 @@ body  {
         margin: 2px;
 }
 .RightText {
-    top: 120px;
-    float: left;
+    top: 20%;
+    float: right;
     width: 12%;
     background-color: var(--main-bg-color);
-    padding-left: 10px;
-        border-radius: 10px;
-        margin: 2px;
-        padding: 3px;
+    padding-left: 1%;
+        border-radius: 1%;
+        margin: 0.5%;
+        padding: 0.5%;
 }
 
 
